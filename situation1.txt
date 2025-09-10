@@ -1,0 +1,33 @@
+ 
+Situation 1 – Étapes suivies pour rendre le projet accessible à B via GitHub
+
+1. Création d’un repository local par Membre A :
+   cd C:\Users\diallo
+   mkdir repo-gei311-lab1-partie2-1-Ibrahima
+   cd repo-gei311-lab1-partie2-1-Ibrahima
+   git init
+   mkdir Dossier_A
+   echo labo 1, gestion de version, Ibrahima > Dossier_A\textA.txt
+   git add .
+   git commit -m "Initial commit : ajout de Dossier_A/textA.txt"
+
+2. Création d’un repository GitHub vide :
+   - Nom : partie2-1-Ibrahima
+   - Aucun README ni .gitignore ajouté à la création.
+
+3. Liaison du repo local avec GitHub et premier push :
+   git remote add origin https://github.com/diallo260/partie2-1-Ibrahima.git
+   git branch -M main
+   git push -u origin main
+
+4. Simulation du rôle de B sur la même machine :
+   cd C:\Users\diallo
+   git clone https://github.com/diallo260/partie2-1-Ibrahima.git repo-B
+   cd repo-B
+
+   (Le dossier repo-gei311-lab1-partie2-1-Ibrahima correspond au rôle de A,
+   et le dossier repo-B correspond au rôle de B).
+
+5. (Optionnel) Création d’une branche de travail par B :
+   git checkout -b Dev_Adama
+   git push -u origin Dev_Adama
